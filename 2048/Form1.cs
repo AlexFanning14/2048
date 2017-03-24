@@ -92,7 +92,15 @@ namespace _2048
                     Tile right = board.ts[x, y];
                     if ((left.num == TileNumbers.empty) && (right.num != TileNumbers.empty))
                     {
+                        
                         left.SetLblNum(right.num);
+                        right.SetLblNum(TileNumbers.empty);
+                        MoveLeft();
+                    }
+                    else if((left.num != TileNumbers.empty) && left.num == right.num)
+                    {
+                        int numToSet = ((int)left.num) * 2;
+                        left.SetLblNum((TileNumbers)numToSet);
                         right.SetLblNum(TileNumbers.empty);
                         MoveLeft();
                     }
@@ -110,6 +118,13 @@ namespace _2048
                     if ((right.num == TileNumbers.empty) && (left.num != TileNumbers.empty))
                     {
                         right.SetLblNum(left.num);
+                        left.SetLblNum(TileNumbers.empty);
+                        MoveRight();
+                    }
+                    else if ((right.num != TileNumbers.empty) && right.num == left.num)
+                    {
+                        int numToSet = ((int)right.num) * 2;
+                        right.SetLblNum((TileNumbers)numToSet);
                         left.SetLblNum(TileNumbers.empty);
                         MoveRight();
                     }
@@ -131,6 +146,13 @@ namespace _2048
                         bottom.SetLblNum(TileNumbers.empty);
                         MoveUp();
                     }
+                    else if ((top.num != TileNumbers.empty) && top.num == bottom.num)
+                    {
+                        int numToSet = ((int)top.num) * 2;
+                        top.SetLblNum((TileNumbers)numToSet);
+                        bottom.SetLblNum(TileNumbers.empty);
+                        MoveUp();
+                    }
                 }
             }
         }
@@ -149,9 +171,19 @@ namespace _2048
                         top.SetLblNum(TileNumbers.empty);
                         MoveDown();
                     }
+                    else if ((bottom.num != TileNumbers.empty) && top.num == bottom.num)
+                    {
+                        int numToSet = ((int)bottom.num) * 2;
+                        bottom.SetLblNum((TileNumbers)numToSet);
+                        top.SetLblNum(TileNumbers.empty);
+                        MoveDown();
+                    }
                 }
             }
         }
+
+        
+
     }
 
 
