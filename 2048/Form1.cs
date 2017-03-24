@@ -18,7 +18,7 @@ namespace _2048
             InitializeComponent();
             PopulateTiles();
             PopulateRandomNumsStart();
-            
+
         }
 
         private void PopulateRandomNumsStart()
@@ -26,10 +26,10 @@ namespace _2048
             Random r = new Random();
             int x = r.Next(3);
             int y = r.Next(3);
-            
+
             board.ts[x, y].SetLblNum(TileNumbers.n2);
 
-            
+
             int x1 = r.Next(3);
             int y1 = r.Next(3);
 
@@ -55,11 +55,11 @@ namespace _2048
             board.ts[3, 1] = p31;
             board.ts[3, 2] = p32;
             board.ts[3, 3] = p33;
-            
+
 
         }
 
-        
+
 
         private void MoveIt(object sender, KeyEventArgs e)
         {
@@ -67,6 +67,19 @@ namespace _2048
             {
                 MoveLeft();
             }
+            else if (e.KeyCode == Keys.Right)
+            {
+                MoveRight();
+            }
+            else if (e.KeyCode == Keys.Up)
+            {
+                MoveUp();
+            }
+            else if(e.KeyCode == Keys.Down)
+            {
+                MoveDown();
+            }
+
         }
 
         public void MoveLeft()
@@ -81,12 +94,66 @@ namespace _2048
                     {
                         left.SetLblNum(right.num);
                         right.SetLblNum(TileNumbers.empty);
+                        MoveLeft();
                     }
                 }
             }
-            
+        }
+        public void MoveRight()
+        {
+            for (int y = 0; y < 4; y++)
+            {
+                for (int x = 0; x < 3; x++)
+                {
+                    Tile right = board.ts[x + 1, y];
+                    Tile left  = board.ts[x, y];
+                    if ((right.num == TileNumbers.empty) && (left.num != TileNumbers.empty))
+                    {
+                        right.SetLblNum(left.num);
+                        left.SetLblNum(TileNumbers.empty);
+                        MoveRight();
+                    }
+                }
+            }
+        }
 
+        public void MoveUp()
+        {
+            for (int x = 0; x < 4; x++)
+            {
+                for (int y = 0; y < 3; y++)
+                {
+                    Tile top = board.ts[x, y + 1];
+                    Tile bottom = board.ts[x, y];
+                    if ((top.num == TileNumbers.empty) && (bottom.num != TileNumbers.empty))
+                    {
+                        top.SetLblNum(bottom.num);
+                        bottom.SetLblNum(TileNumbers.empty);
+                        MoveUp();
+                    }
+                }
+            }
+        }
 
+        public void MoveDown()
+        {
+            for (int x = 0; x < 4; x++)
+            {
+                for (int y = 3; y > 0; y--)
+                {
+                    Tile bottom = board.ts[x, y - 1];
+                    Tile top = board.ts[x, y];
+                    if ((bottom.num == TileNumbers.empty) && (top.num != TileNumbers.empty))
+                    {
+                        bottom.SetLblNum(top.num);
+                        top.SetLblNum(TileNumbers.empty);
+                        MoveDown();
+                    }
+                }
+            }
         }
     }
+
+
+
 }
