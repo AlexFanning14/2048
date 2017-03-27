@@ -46,9 +46,31 @@ namespace _2048
         public void SetLblNum(TileNumbers num)
         {
             if (num == TileNumbers.empty)
-                lbl.Text = "";
+            {
+                string txt = "";
+                if (this.lbl.InvokeRequired)
+                {
+                    this.lbl.BeginInvoke((MethodInvoker)delegate () { this.lbl.Text = txt; ; });
+                }
+                else
+                {
+                    lbl.Text =txt; ;
+                }
+            }
+
             else
-                lbl.Text = ((int)num).ToString();
+            {
+                string txt = ((int)num).ToString();
+                if (this.lbl.InvokeRequired)
+                {
+                    this.lbl.BeginInvoke((MethodInvoker)delegate () { this.lbl.Text = txt; ; });
+                }
+                else
+                {
+                    lbl.Text = txt; ;
+                }
+            }
+                
             
             this.num = num;
             ChangeColor(num);

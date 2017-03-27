@@ -13,6 +13,7 @@ namespace _2048
     public partial class Form1 : Form
     {
         static Board board = new Board();
+        static Random r = new Random();
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace _2048
 
         private void PopulateRandomNumsStart()
         {
-            Random r = new Random();
+            
             int x = r.Next(3);
             int y = r.Next(3);
 
@@ -63,6 +64,16 @@ namespace _2048
 
         private void MoveIt(object sender, KeyEventArgs e)
         {
+            Task.Factory.StartNew(() =>
+           {
+               MoveTile(e);
+           });
+            
+
+        }
+
+        private void MoveTile(KeyEventArgs e)
+        {
             if (e.KeyCode == Keys.Left)
             {
                 MoveLeft();
@@ -75,11 +86,34 @@ namespace _2048
             {
                 MoveUp();
             }
-            else if(e.KeyCode == Keys.Down)
+            else if (e.KeyCode == Keys.Down)
             {
                 MoveDown();
             }
 
+            AddNewTile();
+        }
+
+
+        private void AddNewTile()
+        {
+            int x = r.Next(3);
+            int y = r.Next(3);
+
+            if(board.ts[x,y].num == TileNumbers.empty)
+            {
+                int z = r.Next(2);
+                if(z == 0)                
+                    board.ts[x, y].SetLblNum(TileNumbers.n4);                
+                else
+                    board.ts[x, y].SetLblNum(TileNumbers.n2);
+            }
+            else
+            {
+                AddNewTile();
+            }
+            
+            
         }
 
         public void MoveLeft()
