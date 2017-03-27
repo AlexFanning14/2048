@@ -28,6 +28,8 @@ namespace _2048
     {
         public TileNumbers num;
         public Label lbl;
+        public int x;
+        public int y;
 
         public Tile()
         {
@@ -39,8 +41,14 @@ namespace _2048
             int posy = Location.Y + 35;
             lbl.Location = new System.Drawing.Point(posx, posy);
             lbl.Font = new System.Drawing.Font("Stencil", 16);
-
+            
             Controls.Add(lbl);
+        }
+
+        public void SetCoOr(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
         }
 
         public void SetLblNum(TileNumbers num)
@@ -120,13 +128,7 @@ namespace _2048
 
             }
         }
-
-
-
-
-
-
-
+        
     }
 
 

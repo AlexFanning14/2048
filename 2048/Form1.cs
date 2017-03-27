@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -29,13 +30,18 @@ namespace _2048
             int y = r.Next(3);
 
             board.ts[x, y].SetLblNum(TileNumbers.n2);
+            board.ts[x, y].SetCoOr(x, y);
 
 
             int x1 = r.Next(3);
             int y1 = r.Next(3);
 
             if (x1 != x || y1 != y)
+            {
                 board.ts[x1, y1].SetLblNum(TileNumbers.n2);
+                board.ts[x1, y1].SetCoOr(x1, y1);
+            }
+                
         }
 
         private void PopulateTiles()
@@ -97,16 +103,26 @@ namespace _2048
 
         private void AddNewTile()
         {
+            Thread.Sleep(1);
             int x = r.Next(3);
             int y = r.Next(3);
+
+
 
             if(board.ts[x,y].num == TileNumbers.empty)
             {
                 int z = r.Next(2);
-                if(z == 0)                
-                    board.ts[x, y].SetLblNum(TileNumbers.n4);                
+                if(z == 0)
+                {
+                    board.ts[x, y].SetLblNum(TileNumbers.n4);
+                    board.ts[x, y].SetCoOr(x,y);
+                }
                 else
+                {
                     board.ts[x, y].SetLblNum(TileNumbers.n2);
+                    board.ts[x, y].SetCoOr(x, y);
+                }
+                    
             }
             else
             {
@@ -128,6 +144,7 @@ namespace _2048
                     {
                         
                         left.SetLblNum(right.num);
+                        left.SetCoOr(x - 1, y);
                         right.SetLblNum(TileNumbers.empty);
                         MoveLeft();
                     }

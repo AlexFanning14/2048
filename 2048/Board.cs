@@ -12,6 +12,7 @@ namespace _2048
         const int totalPans = 16;
         public Point[,] ps = new Point[4, 4];
         public Tile[,] ts = new Tile[4, 4];
+        public List<Tile> emptyTiles = new List<Tile>(); 
         public Board()
         {
             AssignLocations();
