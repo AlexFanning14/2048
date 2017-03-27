@@ -50,6 +50,7 @@
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.SaddleBrown;
             this.flowLayoutPanel1.Controls.Add(this.p03);
             this.flowLayoutPanel1.Controls.Add(this.p13);
             this.flowLayoutPanel1.Controls.Add(this.p23);
@@ -73,7 +74,7 @@
             // 
             // p03
             // 
-            this.p03.BackColor = System.Drawing.Color.Moccasin;
+            this.p03.BackColor = System.Drawing.Color.FloralWhite;
             this.p03.Location = new System.Drawing.Point(3, 3);
             this.p03.Name = "p03";
             this.p03.Size = new System.Drawing.Size(90, 90);
@@ -81,7 +82,7 @@
             // 
             // p13
             // 
-            this.p13.BackColor = System.Drawing.Color.Moccasin;
+            this.p13.BackColor = System.Drawing.Color.FloralWhite;
             this.p13.Location = new System.Drawing.Point(99, 3);
             this.p13.Name = "p13";
             this.p13.Size = new System.Drawing.Size(90, 90);
@@ -89,7 +90,7 @@
             // 
             // p23
             // 
-            this.p23.BackColor = System.Drawing.Color.Moccasin;
+            this.p23.BackColor = System.Drawing.Color.FloralWhite;
             this.p23.Location = new System.Drawing.Point(195, 3);
             this.p23.Name = "p23";
             this.p23.Size = new System.Drawing.Size(90, 90);
@@ -97,7 +98,7 @@
             // 
             // p33
             // 
-            this.p33.BackColor = System.Drawing.Color.Moccasin;
+            this.p33.BackColor = System.Drawing.Color.FloralWhite;
             this.p33.Location = new System.Drawing.Point(291, 3);
             this.p33.Name = "p33";
             this.p33.Size = new System.Drawing.Size(90, 90);
@@ -105,7 +106,7 @@
             // 
             // p02
             // 
-            this.p02.BackColor = System.Drawing.Color.Moccasin;
+            this.p02.BackColor = System.Drawing.Color.FloralWhite;
             this.p02.Location = new System.Drawing.Point(3, 99);
             this.p02.Name = "p02";
             this.p02.Size = new System.Drawing.Size(90, 90);
@@ -113,7 +114,7 @@
             // 
             // p12
             // 
-            this.p12.BackColor = System.Drawing.Color.Moccasin;
+            this.p12.BackColor = System.Drawing.Color.FloralWhite;
             this.p12.Location = new System.Drawing.Point(99, 99);
             this.p12.Name = "p12";
             this.p12.Size = new System.Drawing.Size(90, 90);
@@ -121,7 +122,7 @@
             // 
             // p22
             // 
-            this.p22.BackColor = System.Drawing.Color.Moccasin;
+            this.p22.BackColor = System.Drawing.Color.FloralWhite;
             this.p22.Location = new System.Drawing.Point(195, 99);
             this.p22.Name = "p22";
             this.p22.Size = new System.Drawing.Size(90, 90);
@@ -129,7 +130,7 @@
             // 
             // p32
             // 
-            this.p32.BackColor = System.Drawing.Color.Moccasin;
+            this.p32.BackColor = System.Drawing.Color.FloralWhite;
             this.p32.Location = new System.Drawing.Point(291, 99);
             this.p32.Name = "p32";
             this.p32.Size = new System.Drawing.Size(90, 90);
@@ -137,7 +138,7 @@
             // 
             // p01
             // 
-            this.p01.BackColor = System.Drawing.Color.Moccasin;
+            this.p01.BackColor = System.Drawing.Color.FloralWhite;
             this.p01.Location = new System.Drawing.Point(3, 195);
             this.p01.Name = "p01";
             this.p01.Size = new System.Drawing.Size(90, 90);
@@ -145,7 +146,7 @@
             // 
             // p11
             // 
-            this.p11.BackColor = System.Drawing.Color.Moccasin;
+            this.p11.BackColor = System.Drawing.Color.FloralWhite;
             this.p11.Location = new System.Drawing.Point(99, 195);
             this.p11.Name = "p11";
             this.p11.Size = new System.Drawing.Size(90, 90);
@@ -153,7 +154,7 @@
             // 
             // p21
             // 
-            this.p21.BackColor = System.Drawing.Color.Moccasin;
+            this.p21.BackColor = System.Drawing.Color.FloralWhite;
             this.p21.Location = new System.Drawing.Point(195, 195);
             this.p21.Name = "p21";
             this.p21.Size = new System.Drawing.Size(90, 90);
@@ -161,7 +162,7 @@
             // 
             // p31
             // 
-            this.p31.BackColor = System.Drawing.Color.Moccasin;
+            this.p31.BackColor = System.Drawing.Color.FloralWhite;
             this.p31.Location = new System.Drawing.Point(291, 195);
             this.p31.Name = "p31";
             this.p31.Size = new System.Drawing.Size(90, 90);
@@ -169,7 +170,7 @@
             // 
             // p00
             // 
-            this.p00.BackColor = System.Drawing.Color.Moccasin;
+            this.p00.BackColor = System.Drawing.Color.FloralWhite;
             this.p00.Location = new System.Drawing.Point(3, 291);
             this.p00.Name = "p00";
             this.p00.Size = new System.Drawing.Size(90, 90);
@@ -177,7 +178,7 @@
             // 
             // p10
             // 
-            this.p10.BackColor = System.Drawing.Color.Moccasin;
+            this.p10.BackColor = System.Drawing.Color.FloralWhite;
             this.p10.Location = new System.Drawing.Point(99, 291);
             this.p10.Name = "p10";
             this.p10.Size = new System.Drawing.Size(90, 90);
@@ -185,7 +186,7 @@
             // 
             // p20
             // 
-            this.p20.BackColor = System.Drawing.Color.Moccasin;
+            this.p20.BackColor = System.Drawing.Color.FloralWhite;
             this.p20.Location = new System.Drawing.Point(195, 291);
             this.p20.Name = "p20";
             this.p20.Size = new System.Drawing.Size(90, 90);
@@ -193,7 +194,7 @@
             // 
             // p30
             // 
-            this.p30.BackColor = System.Drawing.Color.Moccasin;
+            this.p30.BackColor = System.Drawing.Color.FloralWhite;
             this.p30.Location = new System.Drawing.Point(291, 291);
             this.p30.Name = "p30";
             this.p30.Size = new System.Drawing.Size(90, 90);

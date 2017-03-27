@@ -57,7 +57,6 @@ namespace _2048
                     lbl.Text =txt; ;
                 }
             }
-
             else
             {
                 string txt = ((int)num).ToString();
@@ -70,7 +69,6 @@ namespace _2048
                     lbl.Text = txt; ;
                 }
             }
-                
             
             this.num = num;
             ChangeColor(num);
@@ -81,7 +79,7 @@ namespace _2048
             switch (num)
             {
                 case TileNumbers.empty:
-                        BackColor = Color.Moccasin;
+                        BackColor = Color.FloralWhite;
                         break;
                 case TileNumbers.n2:
                     BackColor = Color.Khaki;
@@ -117,7 +115,7 @@ namespace _2048
                     BackColor = Color.Coral;
                     break;
                 default:
-                    BackColor = Color.Moccasin;
+                    BackColor = Color.FloralWhite;
                     break;
 
             }
