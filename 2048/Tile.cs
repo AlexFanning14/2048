@@ -26,6 +26,7 @@ namespace _2048
 
     public class Tile : Panel
     {
+        //New comment
         public TileNumbers num;
         public Label lbl;
         public int x;
